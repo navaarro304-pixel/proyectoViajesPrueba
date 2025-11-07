@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viajes — Explora el mundo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">ViajaConTú</a>
+      <nav class="nav" id="nav">
+        <a href="#destinos">Destinos</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Descubre tu próxima aventura</h1>
+          <p>Encuentra ofertas y destinos inspiradores con un diseño simple y funcional.</p>
+
+          <form id="searchForm" class="search-form" aria-label="Buscar viajes">
+            <input type="text" id="destino" name="destino" placeholder="Destino (ej. París)" autocomplete="off">
+            <input type="date" id="fecha" name="fecha">
+            <select id="personas" name="personas">
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+            </select>
+            <button type="submit" class="btn-primary">Buscar</button>
+          </form>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="card-sample">✈️</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinos" class="section container">
+      <h2>Destinos destacados</h2>
+      <p class="muted">Inspírate con algunos destinos populares.</p>
+
+      <div class="grid" id="destinosGrid">
+        <!-- Cards estáticas iniciales; el JS podrá inyectar resultados aquí también -->
+        <article class="card">
+          <div class="card-img" style="background-image: linear-gradient(120deg,#a1c4fd,#c2e9fb);"> </div>
+          <div class="card-body">
+            <h3>París, Francia</h3>
+            <p class="muted">Romance, arte y cocina.</p>
+            <button class="btn-ghost">Ver oferta</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img" style="background-image: linear-gradient(120deg,#f6d365,#fda085);"> </div>
+          <div class="card-body">
+            <h3>Bali, Indonesia</h3>
+            <p class="muted">Playas, templos y relax.</p>
+            <button class="btn-ghost">Ver oferta</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img" style="background-image: linear-gradient(120deg,#fbc2eb,#a6c1ee);"> </div>
+          <div class="card-body">
+            <h3>Tokio, Japón</h3>
+            <p class="muted">Cultura, tecnología y gastronomía.</p>
+            <button class="btn-ghost">Ver oferta</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="ofertas" class="section section-cta">
+      <div class="container">
+        <h2>¿Listo para reservar?</h2>
+        <p class="muted">Recibe alertas con las mejores ofertas de viaje.</p>
+        <div class="cta-row">
+          <input id="email" type="email" placeholder="Tu correo" aria-label="correo">
+          <button id="subscribe" class="btn-primary">Suscribirme</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section container small">
+      <h2>Contacto</h2>
+      <p class="muted">Escríbenos para consultas especiales.</p>
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Tu nombre">
+        <input type="email" id="emailContact" placeholder="Correo electrónico">
+        <textarea id="message" rows="4" placeholder="Mensaje"></textarea>
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ViajaConTú — Todos los derechos reservados</p>
+      <small class="muted">Diseño moderno y sencillo · Proyecto demo</small>
+    </div>
+  </footer>
+
+  <script src="action.js"></script>
+</body>
+</html>
